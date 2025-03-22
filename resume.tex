@@ -1,0 +1,146 @@
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[blue]{banking}
+\nopagenumbers{}
+
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\renewcommand*{\labelitemi}{-}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\newcommand*{\experienceentry}[5][1.5mm]{
+    \subsection{#2} \vspace{-1.5mm}
+    \begin{tabularx}{\textwidth}{LR}
+        {\itshape #3} & {\itshape #4, #5}
+    \end{tabularx}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\educationentry}[4][0.5mm]{
+    \begin{tabularx}{\textwidth}{LR}
+        {\bfseries #3} & {\bfseries #4} \\
+    \end{tabularx}
+    {\itshape #2}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\scoreentry}[3][2.5mm]{
+    {\bfseries #2} \\
+    {\itshape #3}
+    \par\addvspace{#1}
+}
+
+\firstname{Omkar}
+\familyname{Sathe}
+\address{Mumbai, India}{}
+
+\begin{document}
+\maketitle
+\vspace{-9.0mm}
+\begin{tabularx}{\textwidth}{C C C}
+    \emailsymbol\enspace \emaillink{work.omkar@outlook.com} & \mobilephonesymbol\enspace (+91) 7506 384976 & \faLinkedin\enspace \href{https://www.linkedin.com/in/omkarsathe2211}{linkedin.com/in/omkarsathe2211} 
+\end{tabularx}
+% \vspace{-0.5mm}
+
+\begin{center}
+\faGithub\enspace \href{https://github.com/OmkarSS-22}{https://github.com/OmkarSS-22}
+\end{center}
+\vspace{-4.0mm}
+
+\section{SUMMARY}
+Full-Stack Developer adept in developing scalable web applications using MERN stack. Passionate about delivering high-quality, user-centric products in a fast-paced environment, I blend technical proficiency with strategic leadership to achieve exceptional results.
+
+% \vspace{1.0mm}
+
+\vspace{-4.0mm}
+
+% \begin{minipage}[t]{0.35\textwidth}
+
+% \section{LANGUAGES}
+% \begin{itemize}
+%     \item English (Native or Bilingual)
+%     \item Marathi (Native)
+%     \item Hindi (Native)
+% \end{itemize}
+
+% \section{INTERESTS}
+% \begin{itemize}
+%     \item Books
+%     \item Music
+%     \item Trekking/Hiking
+% \end{itemize}
+
+% \end{minipage}
+\hfill
+% \begin{minipage}[t]{0.62\textwidth}
+
+\section{EXPERIENCE}
+\experienceentry{SequelString AI Pvt. Ltd.}{Jr. Full Stack Developer (MERN)}{Jul 2023 - Present}{Mumbai, India}
+
+\textbf{Automated Invoice Processing (Sole Developer)}
+\begin{itemize}
+    \item Designed and developed a fully automated invoice processing module integrated into the vendor portal.
+    \item Enabled users to define custom workflows, specifying invoice sources and target locations such as SAP, local storage, or cloud storage.
+    \item Implemented automatic invoice extraction via API and developed custom validation logic, ensuring data accuracy and compliance.
+    \item Optimized data handling and automation, reducing manual invoice processing effort by ~50\%.
+    \item Improved invoice processing efficiency by ~60\%, reducing turnaround time for approvals and payments.
+\end{itemize}
+\vspace{1.0mm}
+
+\textbf{Vendor and Order Management (Full-Stack Developer)}
+\begin{itemize}
+    \item Developed key features for the vendor and order management system, streamlining procurement workflows.
+    \item Implemented three-way matching to ensure data consistency across PO, Invoice, and GRN, reducing reconciliation errors by ~40\%.
+    \item Built and optimized both front-end (React.js) and backend (Node.js, Express, MongoDB), ensuring seamless integration.
+    \item Contributed to the end-to-end design, development, and deployment of new features, improving system efficiency by ~30\%.
+    \item Optimized database queries and API performance, reducing response times by ~1.5 seconds on average.
+\end{itemize}
+\vspace{1.0mm}
+
+\textbf{Sequel Expense (Project Lead and Full-Stack Developer)}
+\begin{itemize}
+    \item Led a team of 3 developers in building an employee expense management application, ensuring on-time delivery.
+    \item Integrated approval workflows for trip requests and reimbursements, improving processing efficiency by ~50\%.
+    \item Acted as the primary full-stack developer, implementing scalable backend logic and a responsive front-end.
+    \item Managed agile development, ensuring feature releases aligned with stakeholder requirements and delivering ~6 features per sprint.
+\end{itemize}
+\vspace{1.0mm}
+
+\textbf{Miscellaneous Projects (Full Stack Developer)}
+\begin{itemize}
+    \item Contributed to projects across different domains, handling both front-end and back-end development.
+    \item Worked cross-functionally with teams to address development challenges and optimize performance.
+    \item Provided technical guidance and troubleshooting, ensuring project stability and reducing bug resolution time by ~30\%.
+\end{itemize}
+\vspace{-2.0mm}
+
+\section{EDUCATION}
+\educationentry{Bachelor of Engineering - Eelec. and Telecom.}{Mumbai University - Apr '23}{Mumbai, India}
+GPA: 7.5/10.0
+\par
+% \end{minipage}
+
+\vspace{-2.0mm}
+
+\section{SKILLS}
+\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3.5mm}L}
+Back End & Node.js, Express.js \\
+Frontend & React.js, Material UI, Chakra UI, Tailwind CSS \\
+Languages & JavaScript (ES6+), TypeScript, HTML5, CSS3 \\
+DBMS & MongoDB \\
+OS & Linux(Fedora) \\
+DevOps and Tools & Git, GitHub, Docker, Azure Functions, REST APIs, Postman \\
+Misc. & VsCode, Figma \\
+Soft-skills & Attention to Detail, Teamwork, Empathy and User-Centric Thinking, Project
+Management Skills
+\end{tabularx}
+
+
+\end{document}

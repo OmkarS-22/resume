@@ -1,0 +1,125 @@
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[blue]{banking}
+\nopagenumbers{}
+
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage[scale=0.93]{geometry}
+\usepackage{tabularx}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep, topsep=0pt, leftmargin=4mm}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+
+% Fix name overlapping by redefining title block
+\renewcommand*{\makecvtitle}{%
+  \begin{center}
+    {\Huge\bfseries Omkar Sathe}\\[1mm] % Adjust spacing here if needed
+  \end{center}
+}
+
+\renewcommand*{\labelitemi}{-}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\newcommand*{\experienceentry}[5][1mm]{
+    \subsection{#2} \vspace{-1mm}
+    \begin{tabularx}{\textwidth}{LR}
+        {\itshape #3} & {\itshape #4, #5}
+    \end{tabularx}
+    \par\addvspace{#1}
+}
+
+\newcommand*{\educationentry}[4][0.5mm]{
+    \begin{tabularx}{\textwidth}{LR}
+        {\bfseries #3} & {\bfseries #4} \\
+    \end{tabularx}
+    {\itshape #2}
+    \par\addvspace{#1}
+}
+
+\begin{document}
+
+\makecvtitle
+\vspace{-6mm}
+
+% Contact row - add spacing to prevent overlap
+\begin{tabularx}{\textwidth}{C C C}
+    \emailsymbol\enspace \emaillink{work.omkar@outlook.com} 
+    & \mobilephonesymbol\enspace (+91) 7506 384976 
+    & \faLinkedin\enspace \href{https://www.linkedin.com/in/omkarsathe2211}{linkedin.com/in/omkarsathe2211}
+\end{tabularx}
+
+\vspace{1mm}
+
+\begin{center}
+\faGithub\enspace \href{https://github.com/OmkarSS-22}{github.com/OmkarSS-22}
+\end{center}
+
+\vspace{-3mm}
+
+\section{SUMMARY}
+Backend-focused Full-Stack Developer with 2 years of experience building secure, scalable systems using Node.js, Express, AWS SDK, and MongoDB. Strong expertise in REST API development, async workflows, cron jobs, authentication, server-to-server communication, and distributed automation pipelines.
+
+\vspace{-3mm}
+
+\section{EXPERIENCE}
+\experienceentry{SequelString AI Pvt. Ltd.}{Jr. Full Stack Developer (MERN)}{Jul 2023 - Present}{Mumbai, India}
+
+\textbf{Automated Invoice Processing (Sole Backend Developer)}
+\begin{itemize}
+    \item Built secure, scalable REST APIs using Node.js \& Express, following HTTP best practices.
+    \item Integrated AWS services via AWS SDK for document upload, retrieval, and archival in S3.
+    \item Developed automated async workflows using Promises, callbacks, throttling, and retry logic.
+    \item Designed and scheduled cron jobs for workflow cycles, batching, and rule-based validations.
+    \item Implemented JWT authentication and OAuth2 integrations (Microsoft Graph, AWS, external vendors).
+    \item Built multi-step validation pipelines reducing manual work by 50 to 60\%.
+    \item Added robust error handling with auto-retry, and monitoring logs.
+    \item Optimized performance via caching and async orchestration strategies.
+\end{itemize}
+
+\textbf{Vendor \& Order Management}
+\begin{itemize}
+    \item Built procurement workflow features including three-way matching (PO, Invoice, GRN), reducing reconciliation errors by 40\%.
+\end{itemize}
+
+\textbf{Sequel Expense (Project Lead)}
+\begin{itemize}
+    \item Led a team of four to build an expense management system with approval workflows, improving efficiency by 50\%.
+\end{itemize}
+
+\textbf{Miscellaneous Projects}
+\begin{itemize}
+    \item Enhanced API performance by 1.5s and reduced bug resolution time by 30\%.
+\end{itemize}
+
+\textbf{Infrastructure \& Deployment}
+\begin{itemize}
+    \item Set up CI/CD pipelines with Docker \& GitHub Actions and deployed services on Azure Functions and on-premise environments.
+\end{itemize}
+
+\vspace{-3mm}
+
+\section{SKILLS}
+\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3mm}L}
+Backend & Node.js, Express.js, REST APIs, Cron Jobs, AWS SDK, SMTP, SFTP, MS Graph APIs, Google APIs, OAuth2, SSE, Server-to-Server Integrations \\
+Frontend & React.js, Tailwind CSS, Material UI, Chakra UI \\
+Languages & JavaScript, TypeScript, HTML5, CSS3 \\
+Database & MongoDB \\
+DevOps & Docker, GitHub Actions, Azure Functions \\
+Tools & Postman, Figma, VS Code \\
+Soft Skills & Problem Solving, Teamwork, Attention to Detail, Ownership
+\end{tabularx}
+
+\vspace{-3mm}
+
+\section{EDUCATION}
+\educationentry{Bachelor of Engineering - Electronics \& Telecom}{University of Mumbai — Apr 2023}{Mumbai, India}
+GPA: 7.5/10.0
+
+\end{document}

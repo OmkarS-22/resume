@@ -1,123 +1,118 @@
-\documentclass[10pt,a4paper]{moderncv}
-\moderncvtheme[blue]{banking}
-\nopagenumbers{}
+\documentclass[a4paper,10pt]{article}
 
-\usepackage[T1]{fontenc}
-\usepackage{inputenc}
-\usepackage[scale=0.93]{geometry}
-\usepackage{tabularx}
-\usepackage{helvet}
+\usepackage[left=0.6in,top=0.6in,right=0.6in,bottom=0.6in]{geometry}
 \usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{parskip}
 
-\renewcommand{\familydefault}{\sfdefault}
-\renewcommand*{\labelitemi}{-}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep, topsep=2pt}
 
-\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=4mm}
-\linespread{0.97}
+% Section styling (Jake-style)
+\titleformat{\section}{
+    \large\bfseries
+}{}{0em}{}[\titlerule]
 
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}
-\newcolumntype{C}{>{\centering\arraybackslash}X}
-\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+% Custom commands
+\newcommand{\name}[1]{\centerline{\huge \bfseries #1}}
+\newcommand{\contact}[1]{\centerline{\small #1}}
 
-\newcommand*{\experienceentry}[4]{
-    \subsection{#1}
-    \begin{tabularx}{\textwidth}{LR}
-        {\itshape #2} & {\itshape #3, #4}
-    \end{tabularx}
-    \vspace{0.5mm}
+\newcommand{\subheading}[4]{
+    \textbf{#1} \hfill #2 \\
+    \textit{#3} \hfill \textit{#4} \\
 }
 
-\newcommand*{\educationentry}[3]{
-    \begin{tabularx}{\textwidth}{LR}
-        {\bfseries #1} & {\bfseries #2} \\
-    \end{tabularx}
-    {\itshape #3}
+\newcommand{\projectheading}[1]{
+    \vspace{2pt}
+    \textbf{#1}
 }
-
-\firstname{Omkar}
-\familyname{Sathe}
-\address{Mumbai, India}{}
-\email{work.omkar@outlook.com}
-\mobile{+91 7506 384976}
-\social[linkedin]{omkarsathe2211}
-\social[github]{OmkarSS-22}
 
 \begin{document}
-\maketitle
-% \vspace{-10mm}
 
-% \begin{tabularx}{\textwidth}{C C C}
-%     \emailsymbol\enspace \emaillink{work.omkar@outlook.com} & 
-%     \mobilephonesymbol\enspace (+91) 7506 384976 & 
-%     \faLinkedin\enspace \href{https://www.linkedin.com/in/omkarsathe2211}{linkedin.com/in/omkarsathe2211}
-% \end{tabularx}
+%----------------------------------------------------------------------------------------
+% HEADER
+%----------------------------------------------------------------------------------------
 
-% \begin{center}
-% \faGithub\enspace \href{https://github.com/OmkarSS-22}{github.com/OmkarSS-22}
-% \end{center}
+\name{Omkar Sathe}
+\contact{Mumbai, India \quad | \quad +91 7506 384976 \quad | \quad \href{mailto:work.omkar@outlook.com}{work.omkar@outlook.com}}
+\contact{\href{https://linkedin.com/in/omkarsathe2211}{linkedin.com/in/omkarsathe2211} \quad | \quad \href{https://github.com/OmkarSS-22}{github.com/OmkarSS-22}}
 
-\section{SUMMARY}
+\vspace{4pt}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+
+\section*{Summary}
+
 Full-Stack MERN Engineer with 2+ years of experience building configurable workflow systems, reusable UI libraries, and production-grade automation platforms. Designed a drag-and-drop invoice workflow engine using React Flow and architected modular backend/frontend systems distributed internally as Node.js packages. Experienced in scalable API design, system modularization, and CI/CD-driven cloud and on-prem deployments.
 
-\section{EXPERIENCE}
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+%----------------------------------------------------------------------------------------
 
-\experienceentry
-{SequelString AI Pvt. Ltd.}
-{Jr. Full Stack Developer (MERN)}
-{Jul 2023 - Present}
-{Mumbai, India}
+\section*{Experience}
 
-\textbf{Automated Invoice Processing Platform (Sole Developer)}
+\subheading
+{SequelString AI Pvt. Ltd.}{Jul 2023 -- Present}
+{Jr. Full Stack Developer (MERN)}{Mumbai, India}
+
+\projectheading{Automated Invoice Processing Platform (Sole Developer)}
 \begin{itemize}
     \item Designed and developed a configurable invoice automation engine with dynamic workflow configuration and rule-based validation.
     \item Built a drag-and-drop node-based process builder using React Flow for visual workflow creation.
-    \item Architected RESTful backend services with SAP API integrations, scheduled processing using node-cron, and real-time status updates using Server-Sent Events (SSE).
-    \item Split the system into independently maintainable frontend and backend Node.js libraries for internal reuse.
-    % \item Reduced manual effort by 50\% and improved efficiency by 60\%; deployed via Docker, GitHub Actions, and Azure Functions with Nginx configured as a reverse proxy for routing and application access across cloud and on-prem environments.
+    \item Architected RESTful backend services with SAP API integrations, scheduled processing using node-cron, and real-time updates using Server-Sent Events (SSE).
+    \item Modularized system into reusable frontend and backend Node.js libraries for internal use.
 \end{itemize}
 
-\textbf{Reusable UI Component Library}
+\projectheading{Reusable UI Component Library}
 \begin{itemize}
-    \item Designed and maintained a centralized internal React component library adopted across organization projects.
-    \item Built reusable date components (react-date-range) and graph components (react-chartjs-2: pie, bar, line, composite).
-    \item Standardized UI patterns, improving consistency and accelerating development velocity.
+    \item Designed and maintained a centralized internal React component library used across multiple projects.
+    \item Built reusable date components and chart components (pie, bar, line, composite).
+    \item Standardized UI patterns, improving consistency and development velocity.
 \end{itemize}
 
-\textbf{Vendor \& Order Management System}
+\projectheading{Vendor \& Order Management System}
 \begin{itemize}
     \item Implemented procurement workflows including automated three-way matching (PO, Invoice, GRN).
     \item Designed MongoDB schemas for reconciliation tracking and transactional consistency.
     \item Reduced reconciliation errors by 40\% and improved API response times by ~1.5 seconds.
 \end{itemize}
 
-\textbf{Sequel Expense (Project Lead \& Full-Stack Developer)}
+\projectheading{Sequel Expense (Project Lead \& Full-Stack Developer)}
 \begin{itemize}
-    \item Led a team of 4 developers in building an enterprise expense management system with multi-level approval workflows.
+    \item Led a team of 4 developers to build an enterprise expense management system with multi-level approval workflows.
     \item Designed role-based access control and approval state-machine logic.
-    \item Delivered 6+ features per sprint under Agile methodology, increasing client processing efficiency by 50\%.
+    \item Delivered 6+ features per sprint under Agile methodology, improving client efficiency by 50\%.
 \end{itemize}
 
-\textbf{Infrastructure \& Deployment}
+\projectheading{Infrastructure \& Deployment}
 \begin{itemize}
-    \item Designed and maintained CI/CD pipelines using Docker and GitHub Actions for multiple internal applications, supporting both cloud and on-prem deployments and enabling reliable release workflows across teams.
+    \item Designed and maintained CI/CD pipelines using Docker and GitHub Actions for cloud and on-prem deployments.
 \end{itemize}
 
-\section{EDUCATION}
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
 
-\educationentry
-{University of Mumbai - Apr '23}
-{Mumbai, India}
-{Bachelor of Engineering - Electronics and Telecommunication \quad | \quad GPA: 7.5/10.0}
+\section*{Education}
 
-\section{SKILLS}
+\textbf{University of Mumbai} \hfill Apr 2023 \\
+Bachelor of Engineering - Electronics and Telecommunication \\
+GPA: 7.5/10.0 \hfill Mumbai, India
 
-\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3mm}X}
-Core Stack & Node.js, Express.js, React.js, MongoDB, TypeScript, JavaScript (ES6+) \\
-UI \& Visualization & React Flow, react-chartjs-2, Component Library Design, Chakra UI, Material UI, Tailwind CSS \\
-Backend \& Architecture & REST APIs, GraphQL, Node.js Package Development, Workflow Engines, Rule-Based Validation, TP API Integration, Authentication (JWT, OAuth2.0), Role-Based Access Control (RBAC) \\
-DevOps & Docker, GitHub Actions (CI/CD), Azure Functions, Nginx \\
-Tools & Git, Postman, VS Code, Figma \\
-Operating Systems & Linux (Fedora) \\
-\end{tabularx}
+%----------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------
+
+\section*{Skills}
+
+\textbf{Core Stack:} Node.js, Express.js, React.js, MongoDB, TypeScript, JavaScript (ES6+) \\
+\textbf{UI \& Visualization:} React Flow, react-chartjs-2, Component Libraries, Chakra UI, Material UI, Tailwind CSS \\
+\textbf{Backend \& Architecture:} REST APIs, GraphQL, Node.js Package Development, Workflow Engines, Rule-Based Validation, Third-Party API Integration, JWT, OAuth2.0, RBAC \\
+\textbf{DevOps:} Docker, GitHub Actions (CI/CD), Azure Functions, Nginx \\
+\textbf{Tools:} Git, Postman, VS Code, Figma \\
+\textbf{Operating Systems:} Linux (Fedora)
 
 \end{document}

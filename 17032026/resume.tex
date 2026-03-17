@@ -1,0 +1,123 @@
+\documentclass[10pt,a4paper]{moderncv}
+\moderncvtheme[blue]{banking}
+\nopagenumbers{}
+
+\usepackage[T1]{fontenc}
+\usepackage{inputenc}
+\usepackage[scale=0.93]{geometry}
+\usepackage{tabularx}
+\usepackage{helvet}
+\usepackage{enumitem}
+
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand*{\labelitemi}{-}
+
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=4mm}
+\linespread{0.97}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\newcommand*{\experienceentry}[4]{
+    \subsection{#1}
+    \begin{tabularx}{\textwidth}{LR}
+        {\itshape #2} & {\itshape #3, #4}
+    \end{tabularx}
+    \vspace{0.5mm}
+}
+
+\newcommand*{\educationentry}[3]{
+    \begin{tabularx}{\textwidth}{LR}
+        {\bfseries #1} & {\bfseries #2} \\
+    \end{tabularx}
+    {\itshape #3}
+}
+
+\firstname{Omkar}
+\familyname{Sathe}
+\address{Mumbai, India}{}
+\email{work.omkar@outlook.com}
+\mobile{+91 7506 384976}
+\social[linkedin]{omkarsathe2211}
+\social[github]{OmkarSS-22}
+
+\begin{document}
+\maketitle
+% \vspace{-10mm}
+
+% \begin{tabularx}{\textwidth}{C C C}
+%     \emailsymbol\enspace \emaillink{work.omkar@outlook.com} & 
+%     \mobilephonesymbol\enspace (+91) 7506 384976 & 
+%     \faLinkedin\enspace \href{https://www.linkedin.com/in/omkarsathe2211}{linkedin.com/in/omkarsathe2211}
+% \end{tabularx}
+
+% \begin{center}
+% \faGithub\enspace \href{https://github.com/OmkarSS-22}{github.com/OmkarSS-22}
+% \end{center}
+
+\section{SUMMARY}
+Full-Stack MERN Engineer with 2+ years of experience building configurable workflow systems, reusable UI libraries, and production-grade automation platforms. Designed a drag-and-drop invoice workflow engine using React Flow and architected modular backend/frontend systems distributed internally as Node.js packages. Experienced in scalable API design, system modularization, and CI/CD-driven cloud and on-prem deployments.
+
+\section{EXPERIENCE}
+
+\experienceentry
+{SequelString AI Pvt. Ltd.}
+{Jr. Full Stack Developer (MERN)}
+{Jul 2023 - Present}
+{Mumbai, India}
+
+\textbf{Automated Invoice Processing Platform (Sole Developer)}
+\begin{itemize}
+    \item Designed and developed a configurable invoice automation engine with dynamic workflow configuration and rule-based validation.
+    \item Built a drag-and-drop node-based process builder using React Flow for visual workflow creation.
+    \item Architected RESTful backend services with SAP API integrations, scheduled processing using node-cron, and real-time status updates using Server-Sent Events (SSE).
+    \item Split the system into independently maintainable frontend and backend Node.js libraries for internal reuse.
+    % \item Reduced manual effort by 50\% and improved efficiency by 60\%; deployed via Docker, GitHub Actions, and Azure Functions with Nginx configured as a reverse proxy for routing and application access across cloud and on-prem environments.
+\end{itemize}
+
+\textbf{Reusable UI Component Library}
+\begin{itemize}
+    \item Designed and maintained a centralized internal React component library adopted across organization projects.
+    \item Built reusable date components (react-date-range) and graph components (react-chartjs-2: pie, bar, line, composite).
+    \item Standardized UI patterns, improving consistency and accelerating development velocity.
+\end{itemize}
+
+\textbf{Vendor \& Order Management System}
+\begin{itemize}
+    \item Implemented procurement workflows including automated three-way matching (PO, Invoice, GRN).
+    \item Designed MongoDB schemas for reconciliation tracking and transactional consistency.
+    \item Reduced reconciliation errors by 40\% and improved API response times by ~1.5 seconds.
+\end{itemize}
+
+\textbf{Sequel Expense (Project Lead \& Full-Stack Developer)}
+\begin{itemize}
+    \item Led a team of 4 developers in building an enterprise expense management system with multi-level approval workflows.
+    \item Designed role-based access control and approval state-machine logic.
+    \item Delivered 6+ features per sprint under Agile methodology, increasing client processing efficiency by 50\%.
+\end{itemize}
+
+\textbf{Infrastructure \& Deployment}
+\begin{itemize}
+    \item Designed and maintained CI/CD pipelines using Docker and GitHub Actions for multiple internal applications, supporting both cloud and on-prem deployments and enabling reliable release workflows across teams.
+\end{itemize}
+
+\section{EDUCATION}
+
+\educationentry
+{University of Mumbai - Apr '23}
+{Mumbai, India}
+{Bachelor of Engineering - Electronics and Telecommunication \quad | \quad GPA: 7.5/10.0}
+
+\section{SKILLS}
+
+\begin{tabularx}{\textwidth}{>{\bfseries}l@{\hskip 3mm}X}
+Core Stack & Node.js, Express.js, React.js, MongoDB, TypeScript, JavaScript (ES6+) \\
+UI \& Visualization & React Flow, react-chartjs-2, Component Library Design, Chakra UI, Material UI, Tailwind CSS \\
+Backend \& Architecture & REST APIs, GraphQL, Node.js Package Development, Workflow Engines, Rule-Based Validation, TP API Integration, Authentication (JWT, OAuth2.0), Role-Based Access Control (RBAC) \\
+DevOps & Docker, GitHub Actions (CI/CD), Azure Functions, Nginx \\
+Tools & Git, Postman, VS Code, Figma \\
+Operating Systems & Linux (Fedora) \\
+\end{tabularx}
+
+\end{document}

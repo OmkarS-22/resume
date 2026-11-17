@@ -14,6 +14,8 @@
     \large\bfseries
 }{}{0em}{}[\titlerule]
 
+% \titlespacing*{\section}{0pt}{6pt}{4pt}
+
 % Custom commands
 \newcommand{\name}[1]{\centerline{\huge \bfseries #1}}
 \newcommand{\contact}[1]{\centerline{\small #1}}
@@ -36,7 +38,7 @@
 
 \name{Omkar Sathe}
 \contact{Mumbai, India \quad | \quad +91 7506 384976 \quad | \quad \href{mailto:work.omkar@outlook.com}{work.omkar@outlook.com}}
-\contact{\href{https://linkedin.com/in/omkarsathe2211}{linkedin.com/in/omkarsathe2211} \quad | \quad \href{https://github.com/OmkarSS-22}{github.com/OmkarSS-22}}
+\contact{\href{https://omkarsathe-dev.vercel.app}{omkarsathe-dev.vercel.app} \quad | \quad \href{https://linkedin.com/in/omkarsathe2211}{linkedin.com/in/omkarsathe2211} \quad | \quad \href{https://github.com/OmkarS-22}{github.com/OmkarS-22}}
 
 \vspace{4pt}
 
@@ -46,7 +48,7 @@
 
 \section*{Summary}
 
-Full-Stack MERN Engineer with 3 years of experience building configurable workflow systems, reusable UI libraries, and production-grade automation platforms. Designed a drag-and-drop invoice workflow engine using React Flow and architected modular backend/frontend systems distributed internally as Node.js packages. Experienced in scalable API design, system modularization, and CI/CD-driven cloud and on-prem deployments.
+Full Stack Developer who owns problems beyond the ticket, from shaping the solution and aligning stakeholders to seeing it through release. Picks up unfamiliar stacks quickly, and works directly with end users to build what they actually need.
 
 %----------------------------------------------------------------------------------------
 % EXPERIENCE
@@ -55,41 +57,26 @@ Full-Stack MERN Engineer with 3 years of experience building configurable workfl
 \section*{Experience}
 
 \subheading
-{SequelString AI Pvt. Ltd.}{Jul 2023 -- Present}
-{Jr. Full Stack Developer (MERN)}{Mumbai, India}
-
-\projectheading{Automated Invoice Processing Platform (Sole Developer)}
+{Vecton AI}{Jul 2026 -- Present}
+{Full Stack Developer \quad (Forward Deployed at a leading Indian NBFC)}{Mumbai, India}
 \begin{itemize}
-    \item Designed and developed a configurable invoice automation engine with dynamic workflow configuration and rule-based validation.
-    \item Built a drag-and-drop node-based process builder using React Flow for visual workflow creation.
-    \item Architected RESTful backend services with SAP API integrations, scheduled processing using node-cron, and real-time updates using Server-Sent Events (SSE).
-    \item Modularized system into reusable frontend and backend Node.js libraries for internal use.
+    \item Sole frontend developer rebuilding a legacy PHP asset valuation platform in Next.js for the NBFC's valuation network (vendors, desk officers, field officers, managers); designed mockups for every role and took it from scratch to UAT.
+    \item Built a Next.js BFF with httpOnly refresh cookies and in-memory session tokens, backend-driven permissions for pages and actions, and a unit-tested design-token component system; remediated VAPT audit findings.
+    \item Developed Spring Boot and PostgreSQL reporting APIs (pipeline funnel, source performance, scoring distribution, audit logs) for the client's lead management system, and implemented previously deferred refresh-token authentication.
+    \item Redesigned and rebuilt the chat interface and admin panel of an internal chat platform used by 30--40 employees, from mockups through release, including voice input and shared data table components.
+    \item Migrated 50 components into a standalone React UI library with Storybook and unit tests, used by the client's AI-assisted screen builder, and evaluated GitHub Packages and AWS CodeArtifact for distribution.
 \end{itemize}
 
-\projectheading{Reusable UI Component Library}
+\subheading
+{SequelString AI Pvt. Ltd.}{Jul 2023 -- Jul 2026}
+{Full Stack Developer \quad (Trainee Engineer $\rightarrow$ Jr. Full Stack Developer $\rightarrow$ Full Stack Developer)}{Mumbai, India}
 \begin{itemize}
-    \item Designed and maintained a centralized internal React component library used across multiple projects.
-    \item Built reusable date components and chart components (pie, bar, line, composite).
-    \item Standardized UI patterns, improving consistency and development velocity.
-\end{itemize}
-
-\projectheading{Vendor \& Order Management System}
-\begin{itemize}
-    \item Implemented procurement workflows including automated three-way matching (PO, Invoice, GRN).
-    \item Designed MongoDB schemas for reconciliation tracking and transactional consistency.
-    \item Reduced reconciliation errors by 40\% and improved API response times by ~1.5 seconds.
-\end{itemize}
-
-\projectheading{Sequel Expense (Project Lead \& Full-Stack Developer)}
-\begin{itemize}
-    \item Led a team of 4 developers to build an enterprise expense management system with multi-level approval workflows.
-    \item Designed role-based access control and approval state-machine logic.
-    \item Delivered 6+ features per sprint under Agile methodology, improving client efficiency by 50\%.
-\end{itemize}
-
-\projectheading{Infrastructure \& Deployment}
-\begin{itemize}
-    \item Designed and maintained CI/CD pipelines using Docker and GitHub Actions for cloud and on-prem deployments.
+    \item Owned three enterprise platforms end to end, from UI design and technical trade-offs to feature prioritization, release planning, client demos, and cross-functional coordination.
+    \item Sole developer of a configurable process automation engine with a React Flow visual builder, node-cron scheduling, and Server-Sent Events; built for invoice processing and extended to ETL pipelines handling 100--200 documents daily.
+    \item Built the vendor onboarding module of a procurement platform used by enterprise pharmaceutical clients, onboarding 500--1,000 vendors daily, including migrations from legacy databases.
+    \item Built the company-wide React component library and design tokens used across every SequelString platform, and packaged the automation engine as reusable frontend and backend Node.js libraries.
+    \item Led a team of 4 interns to build an expense management platform with multi-level approval workflows and RBAC; planned work via GitHub Issues, reviewed all code, and mentored them on team practices.
+    \item Built Docker and GitHub Actions CI/CD pipelines for cloud and on-prem deployments, adopted across most company platforms regardless of team ownership.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -99,8 +86,7 @@ Full-Stack MERN Engineer with 3 years of experience building configurable workfl
 \section*{Education}
 
 \textbf{University of Mumbai} \hfill Apr 2023 \\
-Bachelor of Engineering - Electronics and Telecommunication \\
-GPA: 7.5/10.0 \hfill Mumbai, India
+Bachelor of Engineering - Electronics and Telecommunication \quad | \quad GPA: 7.5/10.0 \hfill Mumbai, India
 
 %----------------------------------------------------------------------------------------
 % SKILLS
@@ -108,11 +94,13 @@ GPA: 7.5/10.0 \hfill Mumbai, India
 
 \section*{Skills}
 
-\textbf{Core Stack:} Node.js, Express.js, React.js, MongoDB, TypeScript, JavaScript (ES6+) \\
-\textbf{UI \& Visualization:} React Flow, react-chartjs-2, Component Libraries, Chakra UI, Material UI, Tailwind CSS \\
-\textbf{Backend \& Architecture:} REST APIs, GraphQL, Node.js Package Development, Workflow Engines, Rule-Based Validation, Third-Party API Integration, JWT, OAuth2.0, RBAC \\
-\textbf{DevOps:} Docker, GitHub Actions (CI/CD), Azure Functions, Nginx \\
-\textbf{Tools:} Git, Postman, VS Code, Figma \\
-\textbf{Operating Systems:} Linux (Fedora)
+\textbf{Languages:} TypeScript, JavaScript (ES6+), Java, SQL \\
+\textbf{Frontend:} Next.js, React, Tailwind CSS, Storybook, Design Systems \& Component Libraries \\
+\textbf{Backend:} Node.js, Express.js, Spring Boot, REST APIs, Server-Sent Events \\
+\textbf{Databases:} PostgreSQL, MongoDB, Flyway \\
+\textbf{Auth \& Security:} JWT, OAuth 2.0, RBAC, Session \& Refresh Token Flows, VAPT Remediation \\
+\textbf{Testing:} Vitest, Unit Testing \\
+\textbf{DevOps:} Docker, Podman, GitHub Actions, Jenkins, Nginx, Azure Functions \\
+\textbf{AI Dev Tools:} Claude Code, Codex
 
 \end{document}
